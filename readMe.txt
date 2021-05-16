@@ -21,7 +21,7 @@ To jump into the specific comments for this example view the following files:
       number of new circle class instances and modifies the svg styling for each.
 
 For all comments, including those outside the scope of this example (modifying SVGS),
-start reviewing at "index.js" and follow the comments.
+start reviewing at "index.js" and follow the comments. 
 
 General Information:
 This example uses a standard set of packages that I use for small apps like this,
