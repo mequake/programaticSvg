@@ -19,6 +19,7 @@ export default class GenericCircle {
     this.svg.appendChild(this.cir);
   }
 
+  // change the fill color of this circle
   setFill(color) {
     this.cir.setAttribute('fill', color);
   }

@@ -1,7 +1,11 @@
-import cuid from 'cuid';
+// Index.js is the app's entry point.
+// It acts within the global scope, so little code is placed here.
+// The "App" class is where user code will begin, it's imported here:
 import App from './app';
-// import './assets/css/styles.css';
+// SCSS styles are also needed for many examples, so those are imported here:
 import('./assets/css/mystyles.scss');
-const startupArgs = [cuid(), 'mq.local', 8080];
-const app = new App(startupArgs);
+// Create a new instance of the app class:
+const app = new App();
+// And START it.
 app.Start();
+// View 'app.js' for further comments.
