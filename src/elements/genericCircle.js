@@ -1,26 +1,21 @@
+import cuid from 'cuid';
+import { SVG } from '@svgdotjs/svg.js';
+
 export default class GenericCircle {
   constructor() {
-    // create the svg element
-    this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-
-    // set width and height
-    this.svg.setAttribute('width', '60');
-    this.svg.setAttribute('height', '60');
-
-    // create a circle
-    this.cir = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    this.cir.setAttribute('cx', '30');
-    this.cir.setAttribute('cy', '30');
-    this.cir.setAttribute('r', '25');
-    this.cir.setAttribute('fill', 'red');
-    this.cir.setAttribute('shape-rendering', 'geometricPrecision');
-
-    // attach it to the container
-    this.svg.appendChild(this.cir);
+    this.id = cuid();
+    this.container = document.createElement('div');
+    this.container.style.width = '60px';
+    this.container.style.height = '60px';
+    this.container.classList.add('is-inline');
+    this.rawSvg = '<svg width="60" height="60"><circle cx="30" cy="30" r="25" shape-rendering="geometricPrecision"></circle></svg>';
+    this.draw = SVG(this.container);
+    this.store = this.draw.svg(this.rawSvg);
   }
 
   // change the fill color of this circle
   setFill(color) {
-    this.cir.setAttribute('fill', color);
+    const obj = this.draw.get(0).children(0);
+    obj.attr('fill', color);
   }
 }

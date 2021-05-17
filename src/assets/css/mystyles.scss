@@ -27,19 +27,6 @@ $input-border-color: transparent;
 $input-shadow: none;
 $box-radius: 12px;
 
-:export {  
-  hotOpal: $hotOpal;
-  opalHsl7: $black-bis;
-  opalHsl14: $black-ter;
-  opalHsl21: $grey-darker;
-  opalHsl29: $grey-dark;
-  opalHsl48: $grey;
-  opalHsl71: $grey-light;
-  opalHsl86: $grey-lighter;
-  opalHsl96: $white-ter;
-  opalHsl98: $white-bis;
-}
-
 // Import only what you need from Bulma
 @import "../../../node_modules/bulma/bulma.sass";
 

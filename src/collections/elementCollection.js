@@ -39,9 +39,6 @@ export default class elementCollection {
     this.CircleOpal86 = new this.GenericCircle();
     // change circle7's color
     this.CircleOpal86.setFill(this.ColorCollection.opal86);
-    // add black outline to circle7 so it can be seen
-    this.CircleOpal86.svg.setAttribute('stroke', 'black');
-    this.CircleOpal86.svg.setAttribute('stroke-width', '1');
     // create circle8
     this.CircleOpal96 = new this.GenericCircle();
     // change circle9's color
@@ -55,15 +52,15 @@ export default class elementCollection {
   // get an array of all the created svg node objects (the 9 circles).
   getCircles() {
     return [
-      this.CircleOpal7.svg,
-      this.CircleOpal14.svg,
-      this.CircleOpal21.svg,
-      this.CircleOpal29.svg,
-      this.CircleOpal48.svg,
-      this.CircleOpal71.svg,
-      this.CircleOpal86.svg,
-      this.CircleOpal96.svg,
-      this.CircleOpal98.svg,
+      this.CircleOpal7.container,
+      this.CircleOpal14.container,
+      this.CircleOpal21.container,
+      this.CircleOpal29.container,
+      this.CircleOpal48.container,
+      this.CircleOpal71.container,
+      this.CircleOpal86.container,
+      this.CircleOpal96.container,
+      this.CircleOpal98.container,
     ];
   }
 }
